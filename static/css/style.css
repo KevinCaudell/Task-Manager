@@ -1,0 +1,95 @@
+/* Task Manager styles */
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	margin: 0;
+	color: #222;
+	background: #f5f7fb;
+}
+
+.app-header {
+	background: linear-gradient(90deg, #4f46e5, #06b6d4);
+	color: #fff;
+	padding: 18px 24px;
+}
+.app-header .brand h1 {
+	margin: 0;
+	font-size: 20px;
+}
+.app-header .tagline {
+	margin: 2px 0 0 0;
+	font-size: 12px;
+	opacity: 0.9;
+}
+
+.app-container {
+	display: flex;
+	min-height: calc(100vh - 72px);
+}
+
+.sidebar {
+	width: 240px;
+	background: #ffffff;
+	border-right: 1px solid #e6e9ef;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px 16px;
+}
+
+.nav-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.nav-menu li {
+	margin: 8px 0;
+}
+.nav-menu a {
+	color: #334155;
+	text-decoration: none;
+	padding: 10px 12px;
+	display: block;
+	border-radius: 6px;
+}
+.nav-menu a:hover {
+	background: #f1f5f9;
+}
+
+.auth-area {
+	margin-top: 16px;
+}
+.auth-btn {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	padding: 10px 12px;
+	background: #0ea5a4;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: 600;
+}
+.auth-btn:hover {
+	filter: brightness(0.95);
+}
+
+.main-content {
+	flex: 1;
+	padding: 28px;
+}
+.hero h2 {
+	margin-top: 6px;
+    text-align: center;
+    text-decoration: underline;
+}
+.hero p {
+	margin: 0 0 18px 0;
+	color: #475569;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+	.app-container { flex-direction: column; }
+	.sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e6e9ef; }
+}
+
