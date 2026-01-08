@@ -1,11 +1,15 @@
 /* Task Manager styles */
+
+/* General CSS */
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	margin: 0;
 	color: #222;
 	background: #f5f7fb;
 }
+/* *************/
 
+/* Header*/
 .app-header {
 	background: linear-gradient(90deg, #4f46e5, #06b6d4);
 	color: #fff;
@@ -20,12 +24,15 @@ body {
 	font-size: 12px;
 	opacity: 0.9;
 }
+/**********/
 
 .app-container {
 	display: flex;
 	min-height: calc(100vh - 72px);
 }
 
+
+/* Navigation */
 .sidebar {
 	width: 240px;
 	background: #ffffff;
@@ -73,20 +80,59 @@ body {
 	filter: brightness(0.95);
 }
 
+/*************/
+
+/* Home Page Main Content*/
+
 .main-content {
 	flex: 1;
 	padding: 28px;
 }
+
+.main-content p{
+	text-align: center;
+}
+
 .hero h2 {
 	margin-top: 6px;
     text-align: center;
     text-decoration: underline;
 }
-.hero p {
-	margin: 0 0 18px 0;
-	color: #475569;
-    text-align: center;
+
+.main-content h3 {
+	text-align: center;
+	text-decoration: underline;
 }
+
+.sign-up {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.sign-up .btn {
+	width: 250px;
+	height: 100px;
+	background: #4f46e5;
+	border-radius: 5px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sign-up .btn a {
+	color: #fff;
+	font-size: 30px;
+	text-decoration: none;
+}
+.sign-up .btn:hover {
+	background: #3730a3;
+	box-shadow: #222 0px 4px 8px;
+}
+
 
 @media (max-width: 800px) {
 	.app-container { flex-direction: column; }
