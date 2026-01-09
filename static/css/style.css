@@ -165,9 +165,9 @@ body {
 }
 
 
-/* Sign Up Page Styles */
+/* Login - Sign Up Page Styles */
 
-.main-content-signup {
+.main-content-signup-login {
 	display: flex;
     justify-content: center; 
     align-items: center;    
@@ -223,7 +223,7 @@ body {
 	font-size: 20px;
 }
 
-.left .login {
+.left .login-signup {
 	width: 250px;
 	height: 80px;
 	background: #ffffff;
@@ -236,13 +236,13 @@ body {
 	margin-top: auto;
 }
 
-.left .login a {
+.left .login-signup a {
 	color: #222;
 	font-size: 16px;
 	text-decoration: none;
 }
 
-.left .login:hover {
+.left .login-signup:hover {
 	filter: brightness(0.92);
     box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
 }
@@ -301,3 +301,5 @@ button:hover {
     filter: brightness(0.92);
     box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
 }
+
+
