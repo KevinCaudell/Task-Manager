@@ -51,7 +51,7 @@ body {
 }
 .auth-btn:hover {
 	background: #e0e7ff;
-
+	box-shadow: #222 0px 4px 8px;
 }
 /**********/
 
@@ -89,7 +89,6 @@ body {
 }
 .nav-menu a:hover {
 	background: #f1f5f9;
-	box-shadow: #222 0px 4px 8px;
 }
 
 
