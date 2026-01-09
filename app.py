@@ -8,8 +8,11 @@ load_dotenv()
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{os.getenv('DB_USER')}:{os.getenv('DB_PASS')}@localhost/{os.getenv('DB_NAME')}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 db = SQLAlchemy(app)
+
+from models import Users, Tasks
 
 @app.route('/')
 def home():
@@ -38,9 +41,6 @@ def tasks():
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
-
-
-
 
 
 if __name__ == '__main__':
