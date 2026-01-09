@@ -10,6 +10,12 @@ body {
 /* *************/
 
 /* Header*/
+.header-align {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .app-header {
 	background: linear-gradient(90deg, #4f46e5, #06b6d4);
 	color: #fff;
@@ -23,6 +29,29 @@ body {
 	margin: 2px 0 0 0;
 	font-size: 12px;
 	opacity: 0.9;
+}
+
+.auth-area {
+	display: flex;
+	flex-direction: row;
+	gap: 40px;
+	margin-right:10px;
+}
+.auth-btn {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	padding: 10px 12px;
+	background: #fff;
+	color: #222;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: 600;
+	gap: 20px;
+}
+.auth-btn:hover {
+	background: #e0e7ff;
+
 }
 /**********/
 
@@ -60,25 +89,10 @@ body {
 }
 .nav-menu a:hover {
 	background: #f1f5f9;
+	box-shadow: #222 0px 4px 8px;
 }
 
-.auth-area {
-	margin-top: 16px;
-}
-.auth-btn {
-	display: inline-block;
-	width: 100%;
-	text-align: center;
-	padding: 10px 12px;
-	background: #0ea5a4;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 8px;
-	font-weight: 600;
-}
-.auth-btn:hover {
-	filter: brightness(0.95);
-}
+
 
 /*************/
 
@@ -113,8 +127,8 @@ body {
 }
 
 .sign-up .btn {
-	width: 250px;
-	height: 100px;
+	width: 300px;
+	height: 125px;
 	background: #4f46e5;
 	border-radius: 5px;
 
@@ -129,7 +143,7 @@ body {
 	text-decoration: none;
 }
 .sign-up .btn:hover {
-	background: #3730a3;
+	background: #06b6d4;
 	box-shadow: #222 0px 4px 8px;
 }
 /*************/
