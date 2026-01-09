@@ -1,87 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>One Task at a Time — Task Manager</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <header class="app-header">
-        <div class="header-align">
-            <div class="brand">
-                <h1>One Task at a Time</h1>
-                <p class="tagline">Focus. Plan. Done.</p>
-            </div>
+{% extends "base.html" %}
 
-            <section class="auth-area">
-                <div class="auth-area-btn">
-                    <a class="auth-btn" href="{{ url_for('signup') }}">Sign Up</a>
-                </div>
-                <div class="auth-area-btn">
-                    <a class="auth-btn" href="{{ url_for('login') }}">Log In</a>
-                </div>
-            </section>
-        </div>
-    </header>
+{% block title %}Home — One Task at a Time{% endblock %}
 
-    <div class="app-container">
-        <aside class="sidebar" role="navigation" aria-label="Main navigation">
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
-                    <li><a href="{{ url_for('tasks') }}">Tasks</a></li>
-                    <li><a href="{{ url_for('calendar') }}">Calendar</a></li>
-                    <li><a href="{{ url_for('settings') }}">Settings</a></li>
-                </ul>
-            </nav>
+{% block content %}
+<section class="hero">
+    <h2>One Task at a Time -- Task Manager</h2>
+    <p>Welcome to the ultimate task manager, where you can change your focus and manage tasks one step at a time.</p>
+</section>
 
-            
-        </aside>
+<section class="goal">
+    <h3>Our Goal</h3>
+    <ul>
+        <li>We want to help you take the stress of managing tasks off your shoulders and allow you to focus on one task at a time.</li>
+        <li>Allowing you to manage one task at a time is the key to a successful future.</li>
+        <li>Enabling you to achieve more with less stress is our mission. We strive to increase your productivity and fulfillment by helping you focus on what matters most.</li>
+    </ul>
+</section>
 
-        <main class="main-content">
-            <section class="hero">
-                <h2>One Task at a Time -- Task Manager</h2>
-                <p>Welcome to the ultimate task manager, where you can change your focus and manage tasks one step at a time.</p>
-            </section>
+<section class="features">
+    <h3>Features</h3>
+    <ul>
+        <li><u>Task Prioritization</u>: Easily prioritize your tasks to focus on what matters most.</li>
+        <li><u>Intuitive Interface</u>: User-friendly design for seamless task management.</li>
+        <li><u>Progress Tracking</u>: Monitor your progress and stay motivated.</li>
+        <li><u>Customizable Settings</u>: Tailor the app to fit your workflow and preferences.</li>
+    </ul>
+</section>
 
-            <section class="goal">
-                <h3>Our Goal</h3>
-                <ul>
-                    <li>We want to help you take the stress of managing tasks off your shoulders and allow you to focus on one task at a time.</li>
-                    <li>Allowing you to manage one task at a time is the key to a successful future.</li>
-                    <li>Enabling you to achieve more with less stress is our mission. We strive to increase your productivity and fulfillment by helping you focus on what matters most.</li>
-                </ul>
-                
+<p class="join">Join us today and experience the difference of managing your tasks one task at a time!</p>
 
-            </section>
-
-            <section class="features">
-                <h3>Features</h3>
-                <ul>
-                    <li><u>Task Prioritization</u>: Easily prioritize your tasks to focus on what matters most.</li>
-                    <li><u>Intuitive Interface</u>: User-friendly design for seamless task management.</li>
-                    <li><u>Progress Tracking</u>: Monitor your progress and stay motivated.</li>
-                    <li><u>Customizable Settings</u>: Tailor the app to fit your workflow and preferences.</li>
-                </ul>
-            </section>
-
-            <p class="join">Join us today and experience the difference of managing your tasks one tasks at a time!</p>
-            <section class="sign-up">
-                <div class="btn">
-                    <a href="{{ url_for('signup') }}">Sign Up Now</a>
-                </div>
-                <div class="btn">
-                    <a href="{{ url_for('login') }}">Log In</a>
-                </div>
-            </section>
-        </main>
+<section class="sign-up">
+    <div class="btn">
+        <a href="{{ url_for('signup') }}">Sign Up Now</a>
     </div>
-
-    <footer class="app-footer">
-        <p>© 2026 Kevin Caudell. All rights reserved.</p>
-        <p>Illustration by Freepik</p>
-    </footer>
-</body>
-</html>
+    <div class="btn">
+        <a href="{{ url_for('login') }}">Log In</a>
+    </div>
+</section>
+{% endblock %}
