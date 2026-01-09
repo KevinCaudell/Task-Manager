@@ -1,6 +1,9 @@
 from flask import Flask, render_template
+import os
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.secret_key = ''
 
 @app.route('/')
 def home():
@@ -30,6 +33,12 @@ def tasks():
 def signup():
     return render_template('signup.html')
 
+db_user = os.environ.get('DB_USER')
+db_pass = os.environ.get('DB_PASS')
+db_name = os.environ.get('DB_NAME')
+db_host = os.environ.get('DB_HOST', 'localhost')  # default to localhost
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{db_user}:{db_pass}@{db_host}/{db_name}'
 
 
 
