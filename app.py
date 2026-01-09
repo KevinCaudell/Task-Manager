@@ -26,6 +26,12 @@ def settings():
 def tasks():
     return render_template('tasks.html')
 
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
+
+
 
 
 if __name__ == '__main__':
