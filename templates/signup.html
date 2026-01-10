@@ -18,7 +18,7 @@
                         tasks and begin tracking your progress!
                     </p>
                     <div class="login-signup">
-                        <a href="{{ url_for('login')}}">Already have an account? Login!</a>
+                        <a href="{{ url_for('login_page')}}">Already have an account? Login!</a>
                     </div>
                 </div>
 
@@ -28,7 +28,7 @@
                 <div class="right">
                     <h1>Create an Account</h1>
 
-                    <form action="{{ url_for('signup') }}" method="post">
+                    <form action="{{ url_for('signup_page') }}" method="post">
                         <input type="email" name="email" placeholder="Email" required>
                         <input type="password" name="password" placeholder="Password" required>
                         <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>

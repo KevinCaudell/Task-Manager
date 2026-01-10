@@ -1,4 +1,4 @@
-from app import db
+from extensions import db   
 
 class User(db.Model):
     __tablename__ = 'USER'
@@ -19,4 +19,4 @@ class Task(db.Model):
     priority = db.Column(db.String(20), nullable=False)
     due_date = db.Column(db.Date, nullable=False)
     color = db.Column(db.String(20), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('USER.ID'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('USER.id'), nullable=False)
